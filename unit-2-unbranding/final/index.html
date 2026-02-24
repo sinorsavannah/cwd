@@ -10,6 +10,7 @@
 	
 </head>
 <style>
+/*I did the style and css like demonstrated in class but I think the method I used for the other project (where the style attribute was in the tag instead of having its own seperate thing like it does here) was a lot more straightforward. This method does not work great for me.*/
 	{box-sizing: border-box;}
 	.body {background-color: white;
 	 color: lightgray;
@@ -20,17 +21,56 @@
 		padding: 5px 10px;
 		position: relative;}
 	.header1 {
-		display: flex; align-items: baseline ; justify-content: left;
+		display: flex; 
+		align-items: baseline ; 
+		justify-content: left;
 		font-family: Helvetica, Roboto, sans-serif;
 		font-size: 30px;
 		color: #665541;
 		padding-left: 128px;
 		padding-top: 40px;
 	}
+	.header1search {
+		position: relative; 
+		display: inline-block;
+	}
+	.search-input { 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		height: 40px; 
+		width: 100%; 
+		border: none; 
+		background: transparent; 
+		margin-left: 350px;
+		font-size: 16px; 
+		color: #333; 
+		outline: none; 
+		cursor: text;
+	}
 	.info {height: 36.2px;
 		display: block;
+		margin-right:128px ;
 		margin-left: auto;
-		margin-right:128px ;}
+	}
+	.darkmode{
+		position: relative; 
+		display: inline-block;
+		width: 100%
+	}
+	#unbrandbutton{
+		position: absolute; 
+		border: none; 
+		background: transparent;
+		outline: none; 
+		top: 0;
+		right: 520px;
+		width: 150px;
+		height: 36px;
+		z-index: 10;
+		cursor: pointer;
+	}
+
 	.header a {float: left;
 		color: black;
 		text-align: center;
@@ -45,10 +85,16 @@
   		color: black;}
 	.header-left {
 		float: left;
-		display: flex; align-items: center ; justify-content: left; margin-left: 128px;
+		display: flex; 
+		align-items: center ; 
+		justify-content: left; 
+		margin-left: 128px;
 	}
 	.header-right {
-		display: flex; align-items: center ; justify-content: right; margin-right: 128px;
+		display: flex; 
+		align-items: center ; 
+		justify-content: right; 
+		margin-right: 128px;
 	}
 	.logo {
 		height: 91px;
@@ -81,17 +127,27 @@
 		padding: 50px;
 	}
 	
+	.blobtext a {
+		color: white;
+	}
 </style>
 <body>
-<img src="./Assets/header.png" class=info>
+	<!-- Learned how to make in interactive header from W3 schools. Links come from the actual Nestle website. Images are screenshots of Nestle components or an the original background image from the website -->
+<div class="darkmode">
+	<img src="./Assets/header.png" class=info alt="info bar with dark mode, global site, and contact info options">
+	<button id="unbrandbutton" onclick="toggleunbranding()"></button>
+</div>
 <div class="header1">
-	<img src="./Assets/Nestlelogo.png" class=logo>
-	<p>Good food, Good life</p>
-	<img class="search" src="./Assets/search.png">
+	<img src="./Assets/Nestlelogo.png" class=logo alt="Nestle logo" id=logo onmouseover="unbrandimage('logo')" onmouseout="brandimage('logo')">
+	<p id=slogan onmouseover="unbrand('slogan')" onmouseout="brand('slogan')">Good food, Good life</p>
+	<div class="header1search">
+		<img class="search" src="./Assets/search.png" alt="website search bar">
+		<input type="text" class="search-input">
+	</div>
 </div>
 <div class="header">
 	<div class= "header-left">
-		<a class="active" href="#home"><img class="active" src="./Assets/home.png"></a>
+		<a class="active" href="#home"><img class="active" src="./Assets/home.png" alt="clipart of a house"></a>
 		<a href="https://www.nestleusa.com/about-us">About Us</a>
 		<a href="https://www.nestleusa.com/stories">Our Stories</a>
 		<a href="https://www.nestleusa.com/sustainability">Sustainability</a>
@@ -105,12 +161,81 @@
 		<a href="https://www.nestleusa.com/media"><b>Media</b></a>
 	</div>
 </div>
-<div class="blob">
+<div class="blob" id=backgroundimage onmouseover="unbrandimagebackground('backgroundimage')" onmouseout="brandimagebackground('backgroundimage')">
 	<div class="blobtext">
-		<h1>Exploring New Ways to Support Community Food Systems</h1>
-		<h2>From meal packs to urban farming initiatives, leveraging the passion of our people can make an impact</h2>
-		<p>Read More</p>
+		<h1 id=community onmouseover="unbrand('community')" onmouseout="brand('community')"	>Exploring New Ways to Support Community Food Systems</h1>
+		<h2 id=meal onmouseover="unbrand('meal')" onmouseout="brand('meal')">From meal packs to urban farming initiatives, leveraging the passion of our people can make an impact</h2>
+		<a href="https://www.nestleusa.com/stories/new-support-community-food-systems">Read More</a>
 	</div>
 </div>
+<script>
+ var brandText
+ var unbrandText
+ var brandImage
+ var unbrandImage
+let unbranded = false;
+ function unbrand (a) {
+ 	if (a == 'slogan'){
+ 		unbrandText="Good taste, Wrong cost"
+ 	}
+ 	else if (a == 'community'){
+ 		unbrandText="Exploring New Ways to Exploit Children Around the World"
+ 	}
+ 	else if (meal){
+ 		unbrandText="From cocoa fields to factory lines, leveraging the labor of children keeps the system running."
+ 	}
+ 	document.getElementById(a).innerText = unbrandText
+  }
+ function brand (a){
+ 	if (a == 'slogan'){
+ 		brandText="Good food, Good Life"
+ 	}
+ 	else if (a == 'community'){
+ 		brandText="Exploring New Ways to Support Community Food Systems"
+ 	}
+ 	else if (meal){
+ 		brandText="From meal packs to urban farming initiatives, leveraging the passion of our people can make an impact."
+ 	}
+ 	document.getElementById(a).innerText = brandText
+ }
+ function unbrandimage (a){
+ 	if (a == 'logo'){
+ 		unbrandImage="./Assets/newnestlelogo.png"
+ 	}
+ 	document.getElementById(a).src = unbrandImage
+ }
+ function unbrandimagebackground(a){
+ 	if (a == 'backgroundimage')
+ 	document.getElementById(a).style.backgroundImage = "url('./Assets/childlabor.jpg')"
+ }
+ function brandimage (a){
+ 	if (a == 'logo'){
+ 		brandImage="./Assets/Nestlelogo.png"
+ 	}
+ 	document.getElementById(a).src = brandImage
+ }
+  function brandimagebackground (a){
+ 	if (a == 'backgroundimage')
+ 	document.getElementById(a).style.backgroundImage = "url('./Assets/background.png')"
+ }
+function toggleunbranding() { 
+	if (!unbranded) { 
+		unbrand('slogan'); 
+		unbrand('community'); 
+		unbrand('meal'); 
+		unbrandimage('logo'); 
+		unbrandimagebackground('backgroundimage'); 
+		unbranded = true; 
+	} 
+	else { 
+		brand('slogan');
+		brand('community'); 
+		brand('meal'); 
+		brandimage('logo'); 
+		brandimagebackground('backgroundimage'); 
+		unbranded = false; 
+	} 
+}
+</script>
 </body>
 </html>
