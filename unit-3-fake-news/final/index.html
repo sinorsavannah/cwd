@@ -27,11 +27,19 @@
   .row {
     font-family: Times New Roman, serif;
   }
+  .headers {
+    padding-bottom: 10px;
+  }
   .mainline {
     text-align: left;
   }
   .mimagephotocredit {
     font-size: 8px;
+  }
+  .mimage {
+    width: 259px;
+    height: 189px;
+    object-fit: cover;
   }
   .mimagetitle {
     font-size: 14px;
@@ -50,6 +58,12 @@
     font-size: 10px;
     text-align: left;
   }
+  .bimage {
+    width: 410px;
+    height: 410px;
+    object-fit: cover;
+    object-position: top;
+  }
   .bimagetitle {
     font-size: 32px;
     font-weight: bold;
@@ -65,6 +79,49 @@
   .simagephotocredit {
     font-size: 8px;
     padding-bottom: 5px;
+  }
+  .simage {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+  }
+  .simagetitle {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .simageblurb {
+    font-size: 10px;
+    font-weight: semibold;
+  }
+  .simagecredit {
+    font-size: 8px;
+    font-weight: semibold;
+  }
+  .simagetext {
+    padding-left: 20px;
+  }
+  .oimage {
+    width: 168px;
+    height: 168px;
+    object-fit: cover;
+  }
+  .oimagephotocredit {
+    font-size: 8px;
+  }
+  .oimagetitle {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .oimageblurb {
+    font-size: 10px;
+    font-weight: semibold;
+  }
+  .oimagecredit {
+    font-size: 8px;
+    font-weight: semibold;
+  }
+  .otherstories {
+    padding-top: 10px;
   }
 </style>
 <body>
@@ -118,120 +175,214 @@
   </div>
   <div class="row mainline">
     <div class="col-3">
-      <div class="row">
-        <img src="./assets/winter.jpg">
+      <div>
+        <img src="./assets/winter.jpg" class="mimage">
       </div>
-      <div class="row mimagephotocredit">
+      <div class="mimagephotocredit">
         Image taken by Savannah Sinor
       </div>
-      <div class="row mimagetitle">
+      <div class="mimagetitle">
         How Spending Time Outdoors Could Change Your Life
       </div>
-      <div class="row mimageblurb">
+      <div class="mimageblurb">
         Fresh air + sunlight = happiness
       </div>
-      <div class="row mimagecredit">
+      <div class="mimagecredit">
         SAVANNAH SINOR
       </div>
-      <div class="row">
-        <img src="./assets/globe.jpg">
+      <div>
+        <img src="./assets/globe.jpg" class="mimage">
       </div>
-      <div class="row mimagephotocredit">
+      <div class="mimagephotocredit">
         Image taken by Jaimi Turgeon
       </div>
-      <div class="row mimagetitle">
+      <div class="mimagetitle">
         New Tech Changes the Game
       </div>
-      <div class="row mimageblurb">
+      <div class="mimageblurb">
         A global coaliton of scientists make major breakthrough in renewable energy
       </div>
-      <div class="row mimagecredit">
+      <div class="mimagecredit">
         SAVANNAH SINOR
       </div>
     </div>
     <div class="col-1">
     </div>
     <div class="col-4">
-      <div class="row">
-        <img src="./assets/apollo.jpg">
+      <div>
+        <img src="./assets/apollo.jpg" class="bimage">
       </div>
-      <div class="row bimagephotocredit">
+      <div class="bimagephotocredit">
         Image taken by Savannah Sinor
       </div>
-      <div class="row bimagetitle">
+      <div class="bimagetitle">
         Top Ten Cutest Dogs
       </div>
-      <div class="row bimageblurb">
+      <div class="bimageblurb">
         You submitted your best furry friends and here are our top picks!
       </div>
-      <div class="row bimagecredit">
+      <div class="bimagecredit">
         SAVANNAH SINOR
       </div>
     </div>
     <div class="col-1">
     </div>
-    <div class="col-1">
+    <div class="col-3">
       <div class="row">
-        <img src="./assets/flag.jpg">
-      </div>
-      <div class="row simagephotocredit">
-        Image taken by teetasse on Pixabay
+        <div class="col-4">
+          <div>
+            <img src="./assets/flag.jpg" class="simage">
+          </div>
+          <div class="simagephotocredit">
+            Image taken by teetasse on Pixabay
+          </div>
+        </div>
+        <div class="col-8 simagetext">
+          <div class="simagetitle">
+            Political Polarization is Decreasing
+          </div>
+          <div class="simageblurb">
+            For the first time in decades, political polarization is decreasing and political parties are agreeing more and more on policies.
+          </div>
+          <div class="simagecredit">
+            SAVANNAH SINOR
+          </div>
+        </div>
       </div>
       <div class="row">
-        <img src="./assets/geothermal.jpg">
-      </div>
-      <div class="row simagephotocredit">
-        Image taken by neanet on Pixabay
+        <div class="col-4">
+          <div>
+            <img src="./assets/geothermal.jpg"class="simage">
+          </div>
+          <div class="simagephotocredit">
+            Image taken by neanet on Pixabay
+          </div>
+        </div>
+        <div class="col-8 simagetext">
+          <div class="simagetitle">
+            Enhanced Geothermal Power Plants Becoming More Popular
+          </div>
+          <div class="simageblurb">
+            Enhanced geothermal power plants allow for previously unsuitable areas to harness geothermal power instead of relying on nonrenewable sources.
+          </div>
+          <div class="simagecredit">
+            SAVANNAH SINOR
+          </div>
+        </div>
       </div>
       <div class="row">
-        <img src="./assets/flags.jpg">
-      </div>
-      <div class="row simagephotocredit">
-        Image taken by Savannah Sinor
+        <div class="col-4">
+          <div>
+            <img src="./assets/flags.jpg" class="simage">
+          </div>
+          <div class="simagephotocredit">
+            Image taken by Savannah Sinor
+          </div>
+        </div>
+        <div class="col-8 simagetext">
+          <div class="simagetitle">
+            Town Square Displays Flags From Every Continent
+          </div>
+          <div class="simageblurb">
+            Residents report feeling unexpectedly united by the display and that it feels like taking a mini world tour.
+          </div>
+          <div class="simagecredit">
+            SAVANNAH SINOR
+          </div>
+        </div>
       </div>
       <div class="row">
-        <img src="./assets/smile.jpg">
+        <div class="col-4">
+          <div>
+            <img src="./assets/smile.jpg" class="simage">
+          </div>
+          <div class="simagephotocredit">
+            Image taken by Kranich17 on Pixabay
+          </div>
+        </div>
+        <div class="col-8 simagetext">
+          <div class="simagetitle">
+            Top Ten Jokes of the Week
+          </div>
+          <div class="simageblurb">
+            Here are the ten funniest jokes we found this week, from dad jokes to punchy one-liners.
+          </div>
+          <div class="simagecredit">
+            SAVANNAH SINOR
+          </div>
+        </div>
       </div>
-      <div class="row simagephotocredit">
-        Image taken by Kranich17 on Pixabay
       </div>
     </div>
-    <div class="col-1">
+  </div>
+  <div class="row otherstories">
+    <div class="col-4">
       <div class="row">
-        test
+      <div class="col-6">
+        <div>
+          <img src="./assets/money.jpg" class="oimage">
+        </div>
       </div>
-      <div class="row">
-        test
+      <div class="col-6">
+        <div class="oimagephotocredit">
+          Image taken by nattanan23 on Pixabay
+        </div>
+        <div class="oimagetitle">
+          National Economy Makes Rapid Recovery
+        </div>
+        <div class="oimageblurb">
+          Unemployment reaches lowest rate in decades, as new, high-paying jobs are created around the country.
+        </div>
+        <div class="oimagecredit">
+          SAVANNAH SINOR
+        </div>
       </div>
-      <div class="row">
-        test
       </div>
+    </div>
+    <div class="col-4">
       <div class="row">
-        test
+      <div class="col-6">
+        <div>
+          <img src="./assets/fajitas.jpg" class="oimage">
+        </div>
       </div>
-      <div class="row">
-        test
+      <div class="col-6">
+        <div class="oimagephotocredit">
+          Image taken by Savannah Sinor
+        </div>
+        <div class="oimagetitle">
+          Quick, Easy, and Healthy Fajita Recipe
+        </div>
+        <div class="oimageblurb">
+          This five ingredient fajita recipe will spice up your week night and leave you time to party afterwards.
+        </div>
+        <div class="oimagecredit">
+          SAVANNAH SINOR
+        </div>
       </div>
-      <div class="row">
-        test
       </div>
+    </div>
+    <div class="col-4">
       <div class="row">
-        test
+      <div class="col-6">
+        <div>
+          <img src="./assets/sport.jpg" class="oimage">
+        </div>
       </div>
-      <div class="row">
-        test
+      <div class="col-6">
+        <div class="oimagephotocredit">
+          Image taken by Savannah Sinor
+        </div>
+        <div class="oimagetitle">
+          Sporting Events More Accessible Than Ever
+        </div>
+        <div class="oimageblurb">
+          All sporting events across the country are now free for students and families' of athletes
+        </div>
+        <div class="oimagecredit">
+          SAVANNAH SINOR
+        </div>
       </div>
-      <div class="row">
-        test
-      </div>
-      <div class="row">
-        test
-      </div>
-      <div class="row">
-        test
-      </div>
-      <div class="row">
-        test
       </div>
     </div>
   </div>
