@@ -105,7 +105,8 @@
 <!-- bootstrap grid layout: https://getbootstrap.com/docs/5.3/layout/grid/ 
   help with padding/margins: https://getbootstrap.com/docs/5.3/utilities/spacing/#notation
   how to hide elements: https://getbootstrap.com/docs/5.3/utilities/display/#hiding-elements
-  navbar: https://getbootstrap.com/docs/5.3/components/navbar/#nav-->
+  navbar: https://getbootstrap.com/docs/5.3/components/navbar/#nav
+  James helped me with moving the bottom row of stories to be in alignment with the left column stories when in tablet mode.-->
 <div class="container text-center">
   <div class="row">
     <div class="col title">
@@ -163,11 +164,10 @@
   </div>
   </nav>
   <div class="row mainline mt-3">
-    <div class="col-lg-1 col-12 d-lg-block d-none">
-    </div>
-    <div class="col-lg-3 col-md-4 col-12">
+  <div class="col-md-4 col-lg-3 col-12">
+    <div>
       <div>
-        <img src="./assets/winter.jpg" class="img-fluid" alt="a snowy forest">
+        <img src="./assets/winter.jpg" class="img-fluid w-100" alt="a snowy forest">
       </div>
       <div class="mimagephotocredit">
         Image taken by Savannah Sinor
@@ -182,7 +182,7 @@
         SAVANNAH SINOR
       </div>
       <div>
-        <img src="./assets/globe.jpg" class="img-fluid" alt="globe from the air and space museum">
+        <img src="./assets/globe.jpg" class="img-fluid w-100" alt="globe from the air and space museum">
       </div>
       <div class="mimagephotocredit">
         Image taken by Jaimi Turgeon
@@ -197,10 +197,84 @@
         SAVANNAH SINOR
       </div>
     </div>
-    <div class="col-lg-8 col-md-8 col-12">
+    <div class="d-lg-none col-12 otherstories">
       <div class="row">
-        <div class="col-lg-6 col-md-12 col-12 p-0">
-          <img src="./assets/apollo.jpg" class="img-fluid" alt="cute pitbull-pointer mix dog names Apollo">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="row">
+          <div class="col-lg-6 col-12">
+            <div>
+              <img src="./assets/money.jpg" class="img-fluid" alt="jars of coins">
+            </div>
+          </div>
+          <div class="col-lg-6 col-12">
+            <div class="oimagephotocredit">
+              Image taken by nattanan23 on Pixabay
+            </div>
+            <div class="oimagetitle">
+              National Economy Makes Rapid Recovery
+            </div>
+            <div class="oimageblurb">
+              Unemployment reaches lowest rate in decades, as new, high-paying jobs are created around the country.
+            </div>
+            <div class="oimagecredit">
+              SAVANNAH SINOR
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="row">
+          <div class="col-lg-6">
+            <div>
+              <img src="./assets/fajitas.jpg" class="img-fluid" alt="pan of fajitas">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="oimagephotocredit">
+              Image taken by Savannah Sinor
+            </div>
+            <div class="oimagetitle">
+              Quick, Easy, and Healthy Fajita Recipe
+            </div>
+            <div class="oimageblurb">
+              This five ingredient fajita recipe will spice up your week night and leave you time to party afterwards.
+            </div>
+            <div class="oimagecredit">
+              SAVANNAH SINOR
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="row">
+          <div class="col-lg-6">
+            <div>
+              <img src="./assets/sport.jpg" class="img-fluid" alt="basketball game with full crowd">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="oimagephotocredit">
+              Image taken by Savannah Sinor
+            </div>
+            <div class="oimagetitle">
+              Sporting Events More Accessible Than Ever
+            </div>
+            <div class="oimageblurb">
+              All sporting events across the country are now free for students and families' of athletes
+            </div>
+            <div class="oimagecredit">
+              SAVANNAH SINOR
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-9 col-md-8 col-12">
+      <div class="row">
+        <div class="col-lg-7 col-md-12 col-12">
+          <img src="./assets/apollo.jpg" class="img-fluid w-100" alt="cute pitbull-pointer mix dog names Apollo">
           <div class="bimagephotocredit">
             Image taken by Savannah Sinor
           </div>
@@ -214,7 +288,7 @@
             SAVANNAH SINOR
           </div>
         </div>
-        <div class="col-lg-4 col-md-12 col-12">
+        <div class="col-lg-5 col-12">
           <div class="row">
             <div class="col-4">
               <div>
@@ -302,7 +376,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-12 col-md-4 col-12 otherstories">
+    <div class="col-lg-12 d-none d-lg-block otherstories">
       <div class="row">
         <div class="col-lg-4 col-md-12 col-12">
           <div class="row">
