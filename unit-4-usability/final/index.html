@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  About this page:  -->
+  <title>Usability Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .titles {
+      font-weight: bolder;
+      font-size: 48px;
+      font-family: serif;
+      text-align: center;
+    }
+    .subtitle {
+      font-style: italic;
+    }
+    .internetarchive {
+      width: 100%;
+      height: auto;
+    }
+    .sus {
+      font-family: serif;
+      font-size: 14px;
+    }
+    .task {
+     padding-top: 20px;
+    }
+    .taskimg {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+    .sus li {
+      display: flex;
+      justify-content: space-between;
+    }
+    .task {
+      font-family: serif;
+      font-size: 14px;
+    }
+    .task h4 {
+      font-weight: bolder;
+    }
+    .subtask {
+      font-style: italic;
+    }
+    .task h5 {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row titles">
+    <div class="col-12">
+      System Usability Scale Results:
+    </div>
+  </div>
+  <div class="row titles subtitle">
+    <div class="col-12">
+      INTERNET ARCHIVE
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <img src="../assets/internetarchive.png" class="internetarchive" alt="screenshot of internet archive homepage">
+    </div>
+    <div class="col-6 sus">
+      <h3>System Usability Scale Results: 45</h3>
+      <p>The result is created using a 10 question questionnaire that users respond on a scale of 1 (strongly disagree) to 5 (strongly agree). Results are then scored by subtracting one from odd item response and for even items, subtracting user response from 5. This re-scales the responses to be 1-4 with 4 being the most positive. The sum of the responses is then multiplied by 2.5 to convert the range of possible values to be 0-100. Want to try it? Put your scores in the boxes next to the questions and click the calculate button at the end! <p><em>Score Breakdown:</em></p>
+        <form action="#" id="myForm">
+          <ol>
+          <li>1. I think that I would like to use this system frequently: 2<input type="number" id="q1" min="1" max="5"/></li>
+          <li>2. I found the system unnecessarily complex: 2<input type="number" id="q2" min="1" max="5" /></li>
+          <li>3. I thought the system was easy to use: 2<input type="number" id="q3" min="1" max="5"/></li>
+          <li>4. I think that I would need the support of a technical person to be able to use this system: 4<input type="number" id="q4"  min="1" max="5" /></li>
+          <li>5. I found the various functions in this system were well integrated: 3<input type="number" id="q5"  min="1" max="5"/></li>
+          <li>6. I thought there was too much inconsistency in this system: 1<input type="number" id="q6"  min="1" max="5"/></li>
+          <li>7. I would imagine that most people would learn to use this system very quickly: 3<input type="number" id="q7"  min="1" max="5"/></li>
+          <li>8. I found the system very cumbersome to use: 3<input type="number" id="q8" min="1" max="5"/></li>
+          <li>9. I felt very confident using the system: 2<input type="number" id="q9"  min="1" max="5"/></li>
+          <li>10. I needed to learn a lot of things before I could get going with this system: 4 <input type="number" id="q10"  min="1" max="5"/></li>
+        </ol>
+        <button type="submit">Calculate your score!</button>
+        </form>
+        <div id="result"></div>
+        <script src="../assets/hello.js"></script>
+      </div>
+      </p>
+    </div>
+  </div>
+  <div class="row task">
+    <div class="col-1">
+    </div>
+    <div class="col-2">
+      <img src="../assets/umw.png" alt="oldest screenshot of UMW's website on Internet Archive" class="taskimg">
+      <h4>Task One</h4>
+      <h4 class="subtask">Find the Oldest Version of UMW's Website</h4>
+      <h5>Time:</h5>
+      <p>2:19.89</p>
+      <h5>Steps and Struggles:</h5>
+      <p><ol>
+        <li>Searched in the Wayback machine for UMW.org instead of UMW.edu.</li>
+        <li>Went back to homepage and searched in the main bar.</li>
+        <li>Found library website.</li>
+        <li>Went back to the Wayback Machine and found the old UMW.edu site</li>
+      </ol></p>
+    </div>
+    <div class="col-2">
+      <img src="../assets/supermariobros.png" alt="super mario brothers 3 loading screen" class="taskimg">
+      <h4>Task Two</h4>
+      <h4 class="subtask">Find and Play Super Mario Brothers 3</h4>
+      <h5>Time:</h5> <p>1:11.26</p>
+      <h5>Steps and Struggles:</h5>
+      <p><ol>
+        <li>Went to Internet Arcade instead of the Software Library.</li>
+        <li>Searched for Super Mario Bros 3 but missed it in the results (in the third row).</li>
+        <li>Went to the Software Library and found it there</li>
+      </ol></p>
+    </div>
+    <div class="col-2">
+      <img src="../assets/website.png" alt="about page for Internet Archive" class="taskimg">
+      <h4>Task Three</h4>
+      <h4 class="subtask">Discover Number of Archived Web Pages</h4>
+      <h5>Time:</h5> <p>00:05.19</p>
+      <h5>Steps and Struggles:</h5>
+      <p><ol>
+        <li>Test. Failure. User immediately found the information right below the search bar on the homepage</li>
+      </ol></p>
+    </div>
+    <div class="col-2">
+      <img src="../assets/tax.png" alt="tax information about donations" class="taskimg">
+      <h4>Task Four</h4>
+      <h4 class="subtask">Determine if Donations are Tax-Deductible</h4>
+      <h5>Time:</h5><p>0:44.23</p>
+      <h5>Steps and Struggles:</h5>
+      <p><ol>
+        <li>After some clicking around, found the Donations page. </li>
+        <li>Missed the last sentence on the page about how donations are tax deductible.</li>
+        <li>Went to the Donations FAQ and clicked on tax deductible question.</li>
+        <li>Found answer on that page</li>
+      </ol></p>
+    </div>
+    <div class="col-2">
+      <img src="../assets/event.png" alt="event calander for Internet Archive" class="taskimg">
+      <h4>Task Five</h4>
+      <h4 class="subtask">Find Event Occuring Closest to May 9th, 2026</h4>
+      <h5>Time:</h5>
+      <p>1:56.00</p>
+      <h5>Steps and Struggles:</h5>
+      <p><ol>
+        <li>Confused at first then preceeds to type May 9th into the main search bar.</li>
+        <li>Looks at the results and decides to go back to the homepage.</li>
+        <li>Found Events tab.</li>
+        <li>Scrolled through events for a while before finding hte No Place to Grow Old event which is the event occuring closest to May 9th.</li>
+      </ol></p>
+    </div>
+    <div class="col-1">
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>
