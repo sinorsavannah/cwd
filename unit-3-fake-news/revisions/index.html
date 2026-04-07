@@ -5,16 +5,374 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- 
-	About this page:
-
-
-	-->
+	About this page:	This page is inspired by my own photos taken through the years and things that I wished would happen (e.g., economy improving). I used my photos whenever possible and just made up a story based on them. The title of my paper, "The Happy Times,"comes from a combination of newspapers often having the word "times" in the name and the phrase "happy times." I ultimately was just trying to create an upbeat paper that was semi-realistic. Because my goal was simple, I kept the design simple to match. I did not want any crazy design features, just simple smooth, grid-based design. For the layout itself, I looked at The Atlantic, The New York Times, and The Washington Post for inspiration. -->
 	<title>Fake News</title>
 	
   	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- google fonts: https://www.w3schools.com/howto/howto_google_fonts.asp -->
+    <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+  <style>
+  	.title {
+  		font-family: 'Alex Brush', Brush Script MT, meddon, segoe script, serif;
+      font-size: 64px;
+      font-weight: bolder;
+  	}
+    .subtitle {
+      font-family: 'Allura', Brush Script Mt, segoe script, serif;
+      font-size: 40px;
+    }
+    .row {
+      font-family: Times New Roman, serif;
+    }
+    .headers {
+      padding-bottom: 10px;
+    }
+    .mainline {
+      text-align: left;
+    }
+    .mimagephotocredit {
+      font-size: 8px;
+    }
+    .mimagetitle {
+      font-size: 14px;
+      font-weight: bolder;
+    }
+    .mimageblurb {
+      font-size: 10px;
+      font-weight: bold;
+    }
+    .mimagecredit {
+      font-size: 8px;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+    .bimagephotocredit {
+      font-size: 10px;
+      text-align: left;
+    }
+    .bimagetitle {
+      font-size: 32px;
+      font-weight: bolder;
+    }
+    .bimageblurb {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .bimagecredit {
+      font-size: 10px;
+      font-weight: bold;
+    }
+    .simagephotocredit {
+      font-size: 8px;
+      padding-bottom: 5px;
+    }
+    .simagetitle {
+      font-size: 14px;
+      font-weight: bolder;
+    }
+    .simageblurb {
+      font-size: 10px;
+      font-weight: bold;
+    }
+    .simagecredit {
+      font-size: 8px;
+      font-weight: bold;
+    }
+    .oimagephotocredit {
+      font-size: 8px;
+    }
+    .oimagetitle {
+      font-size: 14px;
+      font-weight: bolder;
+    }
+    .oimageblurb {
+      font-size: 10px;
+      font-weight: bold;
+    }
+    .oimagecredit {
+      font-size: 8px;
+      font-weight: bold;
+    }
+    .otherstories {
+      padding-top: 10px;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
-	<h1>Hello, world!</h1>
+<!-- bootstrap grid layout: https://getbootstrap.com/docs/5.3/layout/grid/ 
+  help with padding/margins: https://getbootstrap.com/docs/5.3/utilities/spacing/#notation
+  how to hide elements: https://getbootstrap.com/docs/5.3/utilities/display/#hiding-elements
+  navbar: https://getbootstrap.com/docs/5.3/components/navbar/#nav-->
+<div class="container text-center">
+  <div class="row">
+    <div class="col title">
+      HT
+    </div>
+  </div>
+  <div class="row">
+    <div class="col subtitle d-lg-block d-none">
+      The Happy Times
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg" style="background-color: #3c0000;" data-bs-theme="dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link">Jokes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Animals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Science</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Economy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Cooking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Lifestyle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Culture</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Sports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Climate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Politics</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit" style="background-color: #fff1d0">Search</button>
+      </form>
+    </div>
+  </div>
+  </nav>
+  <div class="row mainline mt-3">
+    <div class="col-lg-3 col-md-4 col-12">
+      <div>
+        <img src="./assets/winter.jpg" class="img-fluid w-100" alt="a snowy forest">
+      </div>
+      <div class="mimagephotocredit">
+        Image taken by Savannah Sinor
+      </div>
+      <div class="mimagetitle">
+        How Spending Time Outdoors Could Change Your Life
+      </div>
+      <div class="mimageblurb">
+        Fresh air + sunlight = happiness
+      </div>
+      <div class="mimagecredit">
+        SAVANNAH SINOR
+      </div>
+      <div>
+        <img src="./assets/globe.jpg" class="img-fluid w-100" alt="globe from the air and space museum">
+      </div>
+      <div class="mimagephotocredit">
+        Image taken by Jaimi Turgeon
+      </div>
+      <div class="mimagetitle">
+        New Tech Changes the Game
+      </div>
+      <div class="mimageblurb">
+        A global coaliton of scientists make major breakthrough in renewable energy
+      </div>
+      <div class="mimagecredit">
+        SAVANNAH SINOR
+      </div>
+    </div>
+    <div class="col-lg-9 col-md-8 col-12">
+      <div class="row">
+        <div class="col-lg-7 col-md-12 col-12">
+          <img src="./assets/apollo.jpg" class="img-fluid w-100" alt="cute pitbull-pointer mix dog names Apollo">
+          <div class="bimagephotocredit">
+            Image taken by Savannah Sinor
+          </div>
+          <div class="bimagetitle">
+            Top Ten Cutest Dogs
+          </div>
+          <div class="bimageblurb">
+            You submitted your best furry friends and here are our top picks!
+          </div>
+          <div class="bimagecredit">
+            SAVANNAH SINOR
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-12 col-12">
+          <div class="row">
+            <div class="col-4">
+              <div>
+                <img src="./assets/flag.jpg" class="img-fluid" alt="american flag flying with a blue sky behind it">
+              </div>
+              <div class="simagephotocredit">
+                Image taken by teetasse on Pixabay
+              </div>
+            </div>
+            <div class="col-8 simagetext">
+              <div class="simagetitle">
+                Political Polarization is Decreasing
+              </div>
+              <div class="simageblurb">
+                For the first time in decades, political polarization is decreasing and political parties are agreeing more and more on policies.
+              </div>
+              <div class="simagecredit">
+                SAVANNAH SINOR
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div>
+                <img src="./assets/geothermal.jpg" class="img-fluid" alt="geothermal powerplant in iceland">
+              </div>
+              <div class="simagephotocredit">
+                Image taken by neanet on Pixabay
+              </div>
+            </div>
+            <div class="col-8 simagetext">
+              <div class="simagetitle">
+                Enhanced Geothermal Power Plants Becoming More Popular
+              </div>
+              <div class="simageblurb">
+                Enhanced geothermal power plants allow for previously unsuitable areas to harness geothermal power instead of relying on nonrenewable sources.
+              </div>
+              <div class="simagecredit">
+                SAVANNAH SINOR
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div>
+                <img src="./assets/flags.jpg" class="img-fluid" alt="flags from around the world flying in a square in NYC">
+              </div>
+              <div class="simagephotocredit">
+                Image taken by Savannah Sinor
+              </div>
+            </div>
+            <div class="col-8 simagetext">
+              <div class="simagetitle">
+                Town Square Displays Flags From Every Continent
+              </div>
+              <div class="simageblurb">
+                Residents report feeling unexpectedly united by the display and that it feels like taking a mini world tour.
+              </div>
+              <div class="simagecredit">
+                SAVANNAH SINOR
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div>
+                <img src="./assets/smile.jpg" class="img-fluid" alt="sticky note with a smile on it">
+              </div>
+              <div class="simagephotocredit">
+                Image taken by Kranich17 on Pixabay
+              </div>
+            </div>
+            <div class="col-8 simagetext">
+              <div class="simagetitle">
+                Top Ten Jokes of the Week
+              </div>
+              <div class="simageblurb">
+                Here are the ten funniest jokes we found this week, from dad jokes to punchy one-liners.
+              </div>
+              <div class="simagecredit">
+                SAVANNAH SINOR
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-4 col-12 otherstories">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="row">
+          <div class="col-lg-6">
+            <div>
+              <img src="./assets/money.jpg" class="img-fluid" alt="jars of coins">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="oimagephotocredit">
+              Image taken by nattanan23 on Pixabay
+            </div>
+            <div class="oimagetitle">
+              National Economy Makes Rapid Recovery
+            </div>
+            <div class="oimageblurb">
+              Unemployment reaches lowest rate in decades, as new, high-paying jobs are created around the country.
+            </div>
+            <div class="oimagecredit">
+              SAVANNAH SINOR
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="row">
+          <div class="col-lg-6">
+            <div>
+              <img src="./assets/fajitas.jpg" class="img-fluid" alt="pan of fajitas">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="oimagephotocredit">
+              Image taken by Savannah Sinor
+            </div>
+            <div class="oimagetitle">
+              Quick, Easy, and Healthy Fajita Recipe
+            </div>
+            <div class="oimageblurb">
+              This five ingredient fajita recipe will spice up your week night and leave you time to party afterwards.
+            </div>
+            <div class="oimagecredit">
+              SAVANNAH SINOR
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="row">
+          <div class="col-lg-6">
+            <div>
+              <img src="./assets/sport.jpg" class="img-fluid" alt="basketball game with full crowd">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="oimagephotocredit">
+              Image taken by Savannah Sinor
+            </div>
+            <div class="oimagetitle">
+              Sporting Events More Accessible Than Ever
+            </div>
+            <div class="oimageblurb">
+              All sporting events across the country are now free for students and families' of athletes
+            </div>
+            <div class="oimagecredit">
+              SAVANNAH SINOR
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
