@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+  <title>Energy in the USA</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Metal+Mania&display=swap" rel="stylesheet">
+  <style>
+    .collapsible {
+    background-color: rgba(204, 255, 253, .4);
+    color: white;
+    font-family: Metal Mania;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+  }
+  .content {
+    display: none;
+    font-family: Aclonica;
+    color: white;
+    background-color: rgba(204, 255, 253, .4);
+    font-size: 10pt;
+  }
+  .content.show {
+    display: block;
+  }
+.container {
+          position: relative;
+        }
+.mySlides {
+          display: none;
+        }
+        .cursor {
+          cursor: pointer;
+        }
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          border-radius:0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+          background-color: rgba(204, 255, 253, .4);
+        }
+        .numbertext {
+          color: white;
+          padding: 8px 12px;
+          position: absolute;
+          top: 5px;
+        }
+        .other {
+          color: #566A74;
+        }
+        .caption-container {
+          text-align: center;
+          background-color: rgba(204, 255, 253, .4);
+          color: white;
+          padding: 2px 2px;
+        }
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .column {
+          width: 20%;
+        }
+        .demo {
+          opacity: 0.6;
+        }
+        .active,.demo:hover {
+          opacity: 1;
+        }
+        .gallery {
+          background-color: rgba(204, 255, 253, .4);
+          padding: 15px;
+        }
+
+</style>
+
+
+<button type="button" class="collapsible">
+  Click me to see the different types of renewables!
+</button>
+
+<div class="content">
+  <div class="container gallery">
+    <div class="mySlides">
+      <div class="numbertext other">1/8</div>
+      <img src="../Assets/utilityscalepv.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext"> 2/8</div>
+      <img src="../Assets/rooftoppv.jpg" style="width: 100%;">
+      <!-- source: Budget Bizar on Pexels, https://www.pexels.com/photo/efficient-rooftop-solar-panel-installation-30440447/ -->
+    </div>
+    <div class="mySlides">
+      <div class="numbertext"> 3/8</div>
+      <img src="../Assets/csp.jpg" style="width: 100%;">
+      <!-- source: James Guetschow on Pexels, https://www.pexels.com/photo/photo-of-a-solar-power-plant-14096757/ -->
+    </div>
+    <div class="mySlides">
+      <div class="numbertext"> 4/8</div>
+      <img src="../Assets/onshorewind.jpg" style="width: 100%;">
+      <!-- source: Peechie247 on Pexels, https://www.pexels.com/photo/photograph-of-white-windmills-under-a-blue-sky-4877226/ -->
+    </div>
+    <div class="mySlides">
+     <div class="numbertext"> 5/8</div>
+      <img src="../Assets/offshorewind.jpg" style="width: 100%;">
+      <!-- source: Enrique on Pexels, https://www.pexels.com/search/offshore%20wind/ -->
+    </div>
+    <div class="mySlides">
+      <div class="numbertext"> 6/8</div>
+      <img src="../Assets/woodchips.jpg" style="width: 100%;">
+      <!-- source: Valentin Ivantsov on Pexels, https://www.pexels.com/photo/close-up-of-natural-wooden-chips-texture-35687997/ -->
+    </div>
+    <div class="mySlides">
+      <div class="numbertext"> 7/8</div>
+      <img src="../Assets/geothermal.jpg" style="width: 100%;">
+      <!-- source: Francesco Ungaro on Pexels, https://www.pexels.com/photo/red-factory-near-hills-464390/ -->
+    </div>
+    <div class="mySlides">
+      <div class="numbertext other"> 8/8</div>
+      <img src="../Assets/hydropower.jpg" style="width: 100%;">
+      <!-- source: pexel vishnu on Pexels, https://www.pexels.com/photo/spectacular-view-of-a-dam-in-andhra-pradesh-india-33641743/ -->
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="caption-container">
+      <p id="caption" class="mb-0">
+    </div>
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="../Assets/utilityscalepv.jpg" style="width:100%"onclick="currentSlide(1)" alt="Large Scale Utility Photovoltaic Cells">
+      </div>
+      <div class="column">
+        <img class="demo cursor" style="width: 100%" src="../Assets/rooftoppv.jpg" onclick="currentSlide(2)" alt="Rooftop Photovoltaic Cells">
+      </div>
+      <div class="column">
+        <img class="demo cursor" style="width: 100%" src="../Assets/csp.jpg" onclick="currentSlide(3)" alt="Concentrated Solar Power">
+      </div>
+      <div class="column">
+        <img class="demo cursor" style="width: 100%" src="../Assets/onshorewind.jpg" onclick="currentSlide(4)" alt="Onshore Wind Power">
+      </div>
+      <div class="column">
+        <img class="demo cursor" style="width: 100%" src="../Assets/offshorewind.jpg" onclick="currentSlide(5)" alt="Offshore Wind Power">
+      </div>
+      <div class="column">
+        <img class="demo cursor" style="width: 100%" src="../Assets/woodchips.jpg" onclick="currentSlide(6)" alt="Woodchips, which are a source of solid biomass power">
+      </div>
+      <div class="column">
+        <img class="demo cursor" style="width: 100%" src="../Assets/geothermal.jpg" onclick="currentSlide(7)" alt="Geothermal Power Plant">
+      </div>
+      <div class="column">
+        <img class="demo cursor" style="width: 100%" src="../Assets/hydropower.jpg" onclick="currentSlide(8)" alt="Hydropower Dam">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../Assets/button.js"></script>
+<script src="../Assets/gallery.js"></script>
+</body>

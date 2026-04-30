@@ -48,19 +48,25 @@
       	}
       	.content {
       		display: none;
-      		overflow: hidden;
       		font-family: Aclonica;
       		color: white;
-      		background-color: rgba(204, 255, 253, .4);
       		font-size: 10pt;
+      		padding: 15px;
+      		background-color: rgba(204, 255, 253, .4);
       	}
+      	.renewables-dropdown {
+      		background-color: transparent;
+      	}
+      	.content.show {
+  			display: block;
+		}
       	.container {
       		position: relative;
       	}
       	.mySlides {
       		display: none;
-      	}
-      	.cursor: {
+       	}
+      	.cursor {
       		cursor: pointer;
       	}
       	.prev, .next {
@@ -87,13 +93,19 @@
       		color: white;
       		padding: 8px 12px;
       		position: absolute;
-      		top: 0px;
+      		top: 5px;
+      	}
+      	.other {
+      		color: #566A74;
       	}
       	.caption-container {
       		text-align: center;
       		background-color: rgba(204, 255, 253, .4);
-      		color: white;
+      		color:  #566A74;
       		padding: 2px 2px;
+      	}
+      	#caption {
+      		color: #566A74;
       	}
       	.row:after {
       		content: "";
@@ -101,8 +113,7 @@
       		clear: both;
       	}
       	.column {
-      		float: center;
-      		width: 14.29%;
+      		width: 20%;
       	}
       	.demo {
       		opacity: 0.6;
@@ -111,8 +122,9 @@
       		opacity: 1;
       	}
       	.gallery {
+      		padding: 15px;
+      		height: auto;
       		background-color: rgba(204, 255, 253, .4);
-
       	}
     </style>
 </head>
@@ -144,7 +156,6 @@
 			<div class="content">		
 				<p>BTU stands for British Thermal Unit and it is way to measure heat or energy. One BTU is equivalent to approximately 1055.06 joules or 0.293071 watt hour, which are units you might be more familiar with. One BTU is also the amount of heat you need to warm a pound of water up by 1 degree fahrenheit, if it is easier to think of it that way. A quadrillion BTU, which is our unit of measurement, is 10<sup>15</sup> BTU... so a lot.</p>
 			</div>
-			<script src="../Assets/button.js"></script>	
 		</div>
 	</div>
 	<div class="row mb-3">
@@ -188,80 +199,85 @@
 	</div>
 	<div class="row note">
 		<div class="col-3">
-			<div class="container gallery">
-				<div class="mySlides">
-					<div class="numbertext"> 1/7</div>
-					<img src="../Assets/utilityscalepv.jpg" style="width: 80%;">
-					<!-- source: Braeson Holland on Pexels, https://www.pexels.com/photo/aerial-view-of-a-solar-farm-5987512/ -->
-				</div>
-				<div class="mySlides">
-					<div class="numbertext"> 2/7</div>
-					<img src="../Assets/rooftoppv.jpg" style="width: 80%;">
-					<!-- source: Budget Bizar on Pexels, https://www.pexels.com/photo/efficient-rooftop-solar-panel-installation-30440447/ -->
-				</div>
-				<div class="mySlides">
-					<div class="numbertext"> 3/7</div>
-					<img src="../Assets/csp.jpg" style="width: 80%;">
-					<!-- source: James Guetschow on Pexels, https://www.pexels.com/photo/photo-of-a-solar-power-plant-14096757/ -->
-				</div>
-				<div class="mySlides">
-					<div class="numbertext"> 4/7</div>
-					<img src="../Assets/onshorewind.jpg" style="width: 80%;">
-					<!-- source: Peechie247 on Pexels, https://www.pexels.com/photo/photograph-of-white-windmills-under-a-blue-sky-4877226/ -->
-				</div>
-				<div class="mySlides">
-					<div class="numbertext"> 5/7</div>
-					<img src="../Assets/offshorewind.jpg" style="width: 80%;">
-					<!-- source: Enrique on Pexels, https://www.pexels.com/search/offshore%20wind/ -->
-				</div>
-				<div class="mySlides">
-					<div class="numbertext"> 6/7</div>
-					<img src="../Assets/woodchips.jpg" style="width: 80%;">
-					<!-- source: Valentin Ivantsov on Pexels, https://www.pexels.com/photo/close-up-of-natural-wooden-chips-texture-35687997/ -->
-				</div>
-				<div class="mySlides">
-					<div class="numbertext"> 6/7</div>
-					<img src="../Assets/geothermal.jpg" style="width: 80%;">
-					<!-- source: Francesco Ungaro on Pexels, https://www.pexels.com/photo/red-factory-near-hills-464390/ -->
-				</div>
-				<div class="mySlides">
-					<div class="numbertext"> 7/7</div>
-					<img src="../Assets/hydropower.jpg" style="width: 80%;">
-					<!-- source: pexel vishnu on Pexels, https://www.pexels.com/photo/spectacular-view-of-a-dam-in-andhra-pradesh-india-33641743/ -->
-				</div>
-				<a class="prev" onclick="plusslides(-1)">&#10094</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-				<div class="caption-container">
-					<p id="caption">
-				</div>
-				<div class="row">
-					<div class="column">
-						<img class="demo cursor" src="../Assets/utilityscalepv.jpg" style="width:100%"onclick="currentSlide(1)" alt="Large Scale Utility Photovoltaic Cells">
+			<button type="button" class="collapsible">Click me to see the different types of renewables!</button>
+			<div class="content renewables-dropdown">
+				<!-- https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+				<div class="container gallery">
+					<div class="mySlides">
+						<div class="numbertext other"> 1/8</div>
+						<img src="../Assets/utilityscalepv.jpg" style="width: 100%;">
+						<!-- source: Braeson Holland on Pexels, https://www.pexels.com/photo/aerial-view-of-a-solar-farm-5987512/ -->
 					</div>
-					<div class="column">
-						<img class="demo cursor" style="width: 100%" src="../Assets/rooftoppv.jpg" onclick="currentSlide(2)" alt="Rooftop Photovoltaic Cells">
+					<div class="mySlides">
+						<div class="numbertext"> 2/8</div>
+						<img src="../Assets/rooftoppv.jpg" style="width: 100%;">
+						<!-- source: Budget Bizar on Pexels, https://www.pexels.com/photo/efficient-rooftop-solar-panel-installation-30440447/ -->
 					</div>
-					<div class="column">
-						<img class="demo cursor" style="width: 100%" src="../Assets/csp.jpg" onclick="currentSlide(3)" alt="Concentrated Solar Power">
+					<div class="mySlides">
+						<div class="numbertext"> 3/8</div>
+						<img src="../Assets/csp.jpg" style="width: 100%;">
+						<!-- source: James Guetschow on Pexels, https://www.pexels.com/photo/photo-of-a-solar-power-plant-14096757/ -->
 					</div>
-					<div class="column">
-						<img class="demo cursor" style="width: 100%" src="../Assets/onshorewind.jpg" onclick="currentSlide(4)" alt="Onshore Wind Power">
+					<div class="mySlides">
+						<div class="numbertext"> 4/8</div>
+						<img src="../Assets/onshorewind.jpg" style="width: 100%;">
+						<!-- source: Peechie247 on Pexels, https://www.pexels.com/photo/photograph-of-white-windmills-under-a-blue-sky-4877226/ -->
 					</div>
-					<div class="column">
-						<img class="demo cursor" style="width: 100%" src="../Assets/offshorewind.jpg" onclick="currentSlide(5)" alt="Offshore Wind Power">
+					<div class="mySlides">
+						<div class="numbertext"> 5/8</div>
+						<img src="../Assets/offshorewind.jpg" style="width: 100%;">
+						<!-- source: Enrique on Pexels, https://www.pexels.com/search/offshore%20wind/ -->
 					</div>
-					<div class="column">
-						<img class="demo cursor" style="width: 100%" src="../Assets/woodchips.jpg" onclick="currentSlide(6)" alt="Woodchips, which are a source of solid biomass power">
+					<div class="mySlides">
+						<div class="numbertext"> 6/8</div>
+						<img src="../Assets/woodchips.jpg" style="width: 100%;">
+						<!-- source: Valentin Ivantsov on Pexels, https://www.pexels.com/photo/close-up-of-natural-wooden-chips-texture-35687997/ -->
 					</div>
-					<div class="column">
-						<img class="demo cursor" style="width: 100%" src="../Assets/geothermal.jpg" onclick="currentSlide(6)" alt="Geothermal Power Plant">
+					<div class="mySlides">
+						<div class="numbertext"> 7/8</div>
+						<img src="../Assets/geothermal.jpg" style="width: 100%;">
+						<!-- source: Francesco Ungaro on Pexels, https://www.pexels.com/photo/red-factory-near-hills-464390/ -->
 					</div>
-					<div class="column">
-						<img class="demo cursor" style="width: 100%" src="../Assets/hydropower.jpg" onclick="currentSlide(7)" alt="Hydropower Dam">
+					<div class="mySlides">
+						<div class="numbertext other"> 8/8</div>
+						<img src="../Assets/hydropower.jpg" style="width: 100%;">
+						<!-- source: pexel vishnu on Pexels, https://www.pexels.com/photo/spectacular-view-of-a-dam-in-andhra-pradesh-india-33641743/ -->
 					</div>
-				</div>	
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<div class="caption-container">
+						<p id="caption" class="mb-0">
+					</div>
+					<div class="row">
+						<div class="column">
+							<img class="demo cursor" src="../Assets/utilityscalepv.jpg" style="width:100%"onclick="currentSlide(1)" alt="Large Scale Utility Photovoltaic Cells">
+						</div>
+						<div class="column">
+							<img class="demo cursor" style="width: 100%" src="../Assets/rooftoppv.jpg" onclick="currentSlide(2)" alt="Rooftop Photovoltaic Cells">
+						</div>
+						<div class="column">
+							<img class="demo cursor" style="width: 100%" src="../Assets/csp.jpg" onclick="currentSlide(3)" alt="Concentrated Solar Power">
+						</div>
+						<div class="column">
+							<img class="demo cursor" style="width: 100%" src="../Assets/onshorewind.jpg" onclick="currentSlide(4)" alt="Onshore Wind Power">
+						</div>
+						<div class="column">
+							<img class="demo cursor" style="width: 100%" src="../Assets/offshorewind.jpg" onclick="currentSlide(5)" alt="Offshore Wind Power">
+						</div>
+						<div class="column">
+							<img class="demo cursor" style="width: 100%" src="../Assets/woodchips.jpg" onclick="currentSlide(6)" alt="Woodchips, which are a source of solid biomass power">
+						</div>
+						<div class="column">
+							<img class="demo cursor" style="width: 100%" src="../Assets/geothermal.jpg" onclick="currentSlide(7)" alt="Geothermal Power Plant">
+						</div>
+						<div class="column">
+							<img class="demo cursor" style="width: 100%" src="../Assets/hydropower.jpg" onclick="currentSlide(8)" alt="Hydropower Dam">
+						</div>
+					</div>	
+				</div>
+				<!-- <script src="../Assets/gallery.js"></script> -->
 			</div>
-			<script src="../Assets/gallery.js"></script>
+			
 		</div>
 		<div class="col-6">
 			<div class="flourish-embed flourish-map" data-src="visualisation/28667872"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28667872/thumbnail" width="100%" alt="map visualization" /></noscript></div>
@@ -276,18 +292,23 @@
 			<div class="content">
 				<p>BDT is a bone dry ton. It is equivalent to 2000 pounds of organic materials with zero percent moisture. This would be used to measure biomass like wood.</p>
 			</div>
-			<script src="../Assets/button.js"></script>	
+			<!-- <script src="../Assets/button.js"></script>	 -->
 		</div>
 	</div>
-		<div class="row mb-3">
+	<div class="row mb-3">
 		<div class="col-3">
 		</div>
 		<div class="col-6 text">
 			<p>If not fossil fuel, then what? We've already seen that we are using renewable and nuclear energy, but we aren't using them to their fullest potential. This map shows all the different types of renewable energy potential by state, from solar (Photovoltaic or PV cells) to wind, biomass, and even geothermal, literally harnessing the power of the earth. All of these things are things we are already doing in the U.S., but with public support and government funding, we could revolutionize the energy industry in America.</p>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row note">
 		<div class="col-3">
+			<button type="button" class="collapsible">P.S. Does this chart look familiar to you? Look closely</button>
+			<div class="content">
+				<p>No? Think hard, sometimes we blur out <em>background</em> information when we are trying to focus. </p>
+				<p> Did you get it? That is right, the background for this website is not simply stylized lightining strikes but one of the data representations repeated over and over to form a pattern. That is all data visualizations are, really -- turning numbers into patterns and making those patterns have meaning. Shown to the right, the lines take on temporal data, showing change over time in production and consumption, but when the labels are dropped and the lines blur into the background, they become a <em>striking</em> representation of an iconic symbol for energy: lightning.<p>
+			</div>
 		</div>
 		<div class="col-6">
 			<div class="flourish-embed flourish-chart" data-src="visualisation/28623373"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28623373/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
@@ -298,11 +319,9 @@
 		</div>
 		<div class="col-6 text">
 			<p>To show you how possible this is, let's take a look at production vs consumption of nuclear and renewables. First off, it's on the rise, both for production and consumption. We see that nuclear's production is quickly matched by its consumption rate. This indicates that when nuclear power increases, people are switching to it, and it is filling a gap. When we look at renewables, on the other hand, we can see that in recent years production has started to outpace consumption. That excess is good, because we want to eventually replace fossil fuels. As we sunset those power plants, those consumers will switch to renewables, which means our infrastructure for renewables is starting to prepare. With widespread public support and government funding, we could make the switch. The production capacity is present. The switch to renewables is no longer an if, it is a when, and how fast we do it depends on you. Me. And everyone in the U.S.</p>
-			<p>P.S. Does this chart look familiar to you? Look closesly.
-			</p>
-			<p>No? Think hard, sometimes we blur out <em>background</em> information when we are trying to focus. </p>
-			<p> Did you get it? That is right, the background for this website is not simply stylized lightining strikes but one of the data representations repeated over and over to form a pattern. And that is all data visualizations are, really -- turning numbers into patterns and making those patterns have meaning. Shown above, the lines take on temporal data, showing change over time in production and consumption, but when the labels are dropped and the lines blur into the background, they become a <em>striking</em> representation of an iconic symbol for energy: lightning.<p>
 		</div>
 	</div>
+<script src="../Assets/button.js"></script>	
+<script src="../Assets/gallery.js"></script>
 </body>
 </html>
