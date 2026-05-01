@@ -66,6 +66,18 @@
       	.mySlides {
       		display: none;
        	}
+       	.mySlides img {
+       		width: 100%;
+       		height: 100%;
+       		object-fit: cover;
+       		aspect-ratio: 4/3;
+       	}
+       	.column img {
+       		width: 100%;
+       		height: 100%;
+       		object-fit: cover;
+       		aspect-ratio: 1/1;
+       	}
       	.cursor {
       		cursor: pointer;
       	}
@@ -126,6 +138,9 @@
       		height: auto;
       		background-color: rgba(187, 92, 35, .4);
       	}
+      	.flourish-credit {
+      		color: white;
+      	}
     </style>
 </head>
 <body>
@@ -140,15 +155,21 @@
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1 text">
 			<h3>Overview</h3>
-			<p>Since industrialization, our country has been producing mass amounts of energy to power everything from factories to household appliances. We use electricity for practically everything nowadays. It is hard to go a day without using it in some form or another. So where does it come from? </p>
-			<p>The answer may suprise you... </p>
+			<p>Since the age of industrialization, our country has been producing mass amounts of energy to power everything from factories to household appliances. We use electricity for practically everything nowadays. Can you imagine what your life would look like without power? It is difficult isn't it? Once you start thinking about it, you realize how much every aspect of our lives is impacted. From your electronics to hospital equipment, temperture control to air traffic control -- from luxuries to life saving equipment, energy is a key component of society. For something so important, do you know where it comes from?</p>
+			<p>Let's take a look!</p>
 		</div>
 	</div>
 	<div class="row mb-3 note">
 		<div class="col-lg-3 col-md-6 col-12 order-lg-1 order-md-2 order-2">
+			<button type="button" class="collapsible">Why are renewable energy and nuclear electric seperate categories?</button>
+			<div class="content">
+				<p> Is nuclear power renewable?<p>
+				<p> That is the a big debate within environmental science and environmental politics. It comes down to semantics, what do you mean when you say renewable? Do you mean energy coming from a sources that is constantly replenished or do you mean a source that is sustainable for the environment (aka green energy)? Using the first definition, which is the technical definition, then nuclear does not fit that classification because nuclear power is derived from radioactive fuel of which there is a finite supply. But if you mean is it sustainable then it could potentially fit within the category.<p>
+				<p>Herein lies the debate. One side will point out the nuclear power does not emit greenhouse gases therefor it is not polluting the earth. The otherside would say that nuclear does produce nuclear waste. That radioactive waste stays radioactive for tens of thousands of years and is unsafe for humans to be around. So, nuclear power is more sustainable than fossil fuels but not as much as a true renewable power source</p>
+			</div>
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
-			<div class="flourish-embed flourish-chart" data-src="visualisation/28557364"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28557364/thumbnail" width="100%" alt="chart visualization" /></noscript>
+			<div class="flourish-embed flourish-chart" data-src="visualisation/28557364"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28557364/thumbnail" width="100%" alt="line chart showing the total primary energy production in the US from 1949 to 2025" /></noscript>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 col-12 order-lg-3 order-md-3 order-3">
@@ -162,16 +183,16 @@
 		<div class="col-lg-3 col-md-6 col-12 order-lg-1 order-md-2 order-2">
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1 text">
-			<p>As we can see from the graph above, our source of energy here in the U.S. has changed over time. Focusing on 1949 on wards we can see trends move from nearly entire production being fossil fuel based to now including renewable and nuclear energy.
+			<p>As we can see from the graph above, our source of energy here in the U.S. has changed over time. Focusing on 1949 on wards we can see trends move from production almost entirely being sourced from fossil fuels to now including renewable and nuclear energy.
 			</p>
-			<p>But perhaps more suprising is that renewables existed all the way back in 1949. When you think of renewables do you think of high tech solar panels? Well those are a great example of modern renewable energy, we have been ale to harness power from the wind and water for centuries. Renewables aren't as new as you might think.</p>
+			<p>But perhaps more suprising is that renewable sources of energy existed all the way back in 1949 (nuclear power starts in the late 1950s). When you think of renewables do you think of high tech solar panels? Well those are a great example of modern renewable energy, but we have been able to harness power from the wind and water for centuries. Renewables aren't as new as you might think.</p>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-3 col-md-6 col-12 order-lg-1 order-md-2 order-2">
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
-			<div class="flourish-embed flourish-chart" data-src="visualisation/28592320"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28592320/thumbnail" width="100%" alt="chart visualization" /></noscript>
+			<div class="flourish-embed flourish-chart" data-src="visualisation/28592320"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28592320/thumbnail" width="100%" alt="a pie chart showing total power consumption in the U.S." /></noscript>
 			</div>
 		</div>
 	</div>
@@ -179,14 +200,15 @@
 		<div class="col-lg-3 col-md-6 col-12 order-lg-1 order-md-2 order-2">
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1 text">
-			<p>Not only are we producing more energy from renewables at the time, we are also consuming more. The pie slice that is renewable power consumption in the U.S. gets bigger every year. The nuclear power grows too. It took us a bit longer to figure out how to get nuclear power working, but once it is on, it's on.</p>
+			<p>Not only are we producing more renewable and nuclear now, we are also consuming more. Looking at the pie chart above, if you click play and allow it to progress through the time line, you'll see the pie slices representing renewable and nuclear power growing every year. By 2025, renewable energy and nuclear power represent approximately 17% of our total power consumption.</p>
+			<p>These two charts show how the make up of U.S. total consumption and production has changed over time but let us now turn to how production and consumption have changed relative to eachother.</p>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-3 col-md-6 col-12 order-lg-1 order-md-2 order-2">
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
-			<div class="flourish-embed flourish-chart" data-src="visualisation/28592201"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28592201/thumbnail" width="100%" alt="chart visualization" /></noscript>
+			<div class="flourish-embed flourish-chart" data-src="visualisation/28592201"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28592201/thumbnail" width="100%" alt="a line chart showing primary energy imports and exports from 1949 to 2025" /></noscript>
 			</div>
 		</div>
 	</div class="row mb-3">
@@ -194,12 +216,24 @@
 		<div class="col-lg-3 col-md-6 col-12 order-lg-1 order-md-2 order-2">
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1 text">
-			<p>As you can see, overall consumption and production are increasing, A good way to track that is imports and exports. We import when we consume more than we produce, and we export when we produce more than we consume. Over the timeframe we can see both have increased but production had outpaced consumption. Our exports rise rapidly over the 2000s, and it's important to dig into why. During that time, we discover new shaling and other drilling practices, which allow us to access previously inaccessible deposits of natural gas and oil throughout the U.S. This new tech resulted in us being the #1 exporter for natural oil and gas. While being an exporter instead of an importer does provide energy security, these resources are limited, and we cannot rely on them forever.</p>
+			<p>Primary imports and exports are great proxy indicator for overall consumption and production. We import when we consume more than we produce, and we export when we produce more than we consume. As such, you can see that both consumption and production have both been increasing. However, production has started to outpace consumption as of 2019.</p> 
+			<p>Our exports started rising rapidly in the early 2000s, and it's important to dig into why. During that time, we discovered new fracking and other drilling practices, which allowed us to access previously inaccessible deposits of natural gas and oil throughout the U.S. This new technology resulted in the U.S. being the #1 exporter for natural oil and gas. While being an exporter instead of an importer does provide energy security, these resources are limited, and we cannot rely on them forever. For energy security and for the sake of the environment we need to consider diversifying our sources of energy.</p>
 		</div>
 	</div>
 	<div class="row note mb-3">
 		<div class="col-lg-3 col-md-6 col-12 order-lg-1 order-md-2 order-2">
-			<button type="button" class="collapsible">Click me to see the different types of renewables!</button>
+			<button type="button" class="collapsible">Do you need a refresher on types of renewable sources? Click Me!</button>
+			<div class="content">
+				<p><em>Urban and Rural Utility-scale PV:</em> PV stands for photovoltaic which refers to solar panels. These are large scale solar panel farms either in cities or rural areas.</p>
+				<p><em>Rooftop PV:</em> These are small scale solar panels on the top of people's homes and businesses.</p>
+				<p><em>CSP:</em> Stands for Concentrated Solar Power. It uses mirrors to focus light and generate high-temperature heat which produces electricity via steam turbines</p>
+				<p><em>Onshore Wind:</em> A wind farm that is onland, typically these are in the midwest.</p>
+				<p><em>Offshore Wind:</em> A wind farm that is either off the coast or in the great lakes. The northeast in the U.S. is a good place for offshore wind.</p>
+				<p><em>Biopower-solid/gaseous:</em> Biopower comes from burning or converting biomass to heat or electricity. Biomass is organic material. Biopower can come from solid biomass such as woodchips or agricultural waste or gaseous biomass. Gaseous biomass comes from a process that uses bacteria to break down the solid waste (mainly animal manure and human sewage) and produce methane which can be used for internal combusition engines, turbines, and fuels cells to generate electricity.</p>
+				<p><em>Geothermal Hydrothermal and EGS Geothermal:</em> Geothermal power harnesses the heat from Earth's interior for electricity generation. Hydrothermal is the traditional method which uses naturally occuring heat, water, and permeability to generate heat whereas EGS (enhanced geothermal systems) is new technology that can create artificial reservoirs in areas that lack natural permeability.</p>
+				<p><em>Hydropower:</em> Uses the natural flow of water to to turn turbines.</p>
+			</div>
+			<button type="button" class="collapsible">Click me to see images of the different types of renewables!</button>
 			<div class="content renewables-dropdown">
 				<!-- https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
 				<div class="container gallery">
@@ -277,10 +311,9 @@
 				</div>
 				<!-- <script src="../Assets/gallery.js"></script> -->
 			</div>
-			
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
-			<div class="flourish-embed flourish-map" data-src="visualisation/28667872"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28667872/thumbnail" width="100%" alt="map visualization" /></noscript></div>
+			<div class="flourish-embed flourish-map" data-src="visualisation/28667872"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28667872/thumbnail" width="100%" alt="a map showing renewable energy potential in the U.S. by state" /></noscript></div>
 		</div>
 		<div class="col-lg-3 col-md-6 col-12 order-lg-3 order-md-3 order-3">
 			<button type="button" class="collapsible">GW.... uh George Washington???</button>
@@ -299,7 +332,7 @@
 		<div class="col-lg-3 col-md-6 col-12 order-lg-1 order-md-2 order-2">
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1 text">
-			<p>If not fossil fuel, then what? We've already seen that we are using renewable and nuclear energy, but we aren't using them to their fullest potential. This map shows all the different types of renewable energy potential by state, from solar (Photovoltaic or PV cells) to wind, biomass, and even geothermal, literally harnessing the power of the earth. All of these things are things we are already doing in the U.S., but with public support and government funding, we could revolutionize the energy industry in America.</p>
+			<p>If not fossil fuel, then what? We've already seen that we are using renewable and nuclear energy, but we aren't using them to their fullest potential. This map shows all the different types of renewable energy potential by state, from solar to wind, biomass, and even geothermal, literally harnessing the power of the earth. All of these things are things we are already doing in the U.S., but with public support and government funding, we could revolutionize the energy industry in America.</p>
 		</div>
 	</div>
 	<div class="row note">
@@ -311,7 +344,7 @@
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
-			<div class="flourish-embed flourish-chart" data-src="visualisation/28623373"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28623373/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+			<div class="flourish-embed flourish-chart" data-src="visualisation/28623373"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28623373/thumbnail" width="100%" alt="a line chart showing nuclear and renewable energy production and consumption in the US" /></noscript></div>
 		</div>
 	</div>
 	<div class="row mb-3">
